@@ -1,0 +1,172 @@
+﻿<controls:MetroWindow x:Class="SongFinder.MainWindow"
+                      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                      mc:Ignorable="d"
+                      xmlns:controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+                      BorderThickness="1" Title="SongFinder" Height="260" Width="400"
+                      Deactivated="MainWindow_OnDeactivated" Icon="songfinder.ico" ContentRendered="MainWindow_OnContentRendered"
+                      ResizeMode="CanMinimize" ShowTitleBar="True" ShowIconOnTitleBar="False">
+    <controls:MetroWindow.RightWindowCommands>
+        <controls:WindowCommands>
+            <Button Content="SongConverter" Click="Converter_OnClick" />
+            <Button Content="Einstellungen" Click="Settings_OnClick" />
+        </controls:WindowCommands>
+    </controls:MetroWindow.RightWindowCommands>
+
+    <StackPanel>
+        <Canvas Width="200" Height="40" Margin="20">
+            <Canvas.RenderTransform>
+                <TranslateTransform X="0" Y="0" />
+            </Canvas.RenderTransform>
+            <Canvas.Resources />
+            <Canvas>
+                <Canvas.RenderTransform>
+                    <TranslateTransform X="0" Y="-257" />
+                </Canvas.RenderTransform>
+                <Canvas Opacity="1">
+                    <Canvas.RenderTransform>
+                        <MatrixTransform Matrix="0.49638832 0 0 0.49638832 0.72233476 149.4282" />
+                    </Canvas.RenderTransform>
+                    <Path Fill="#FF000000"
+                          StrokeThickness="1.91573977" StrokeLineJoin="Miter" StrokeStartLineCap="Flat"
+                          StrokeEndLineCap="Flat">
+                        <Path.Data>
+                            <PathGeometry
+                                Figures="m 32.148252 228.99188 q -1.839111 0 -2.988555 0.5364 -1.149444 0.45978 -1.83911 1.30271 -0.613037 0.76629 -0.842926 1.83911 -0.229888 0.99618 -0.229888 1.99237 0 2.37551 1.83911 3.98474 1.91574 1.60922 4.751035 3.06518 2.911925 1.45596 6.206998 3.06518 3.295073 1.60923 6.130368 3.98474 2.835295 2.29889 4.674406 5.74722 1.83911 3.44834 1.83911 8.50589 0 0.68967 0 1.37933 0 0.61304 -0.153259 0.99619 -1.072815 6.97329 -5.74722 10.1151 -4.674406 3.14182 -13.716699 3.14182 -9.655329 0 -14.636253 -4.75104 -4.980924 -4.75103 -4.980924 -12.56725 h 13.716698 q 0 1.37933 0.153259 2.68203 0.153259 1.22608 0.766296 2.22226 0.613037 0.99619 1.762481 1.60922 1.226074 0.53641 3.295073 0.53641 1.83911 0 2.911925 -0.45978 1.149444 -0.5364 1.76248 -1.37933 0.689667 -0.84293 0.919556 -1.83911 0.306518 -0.99618 0.306518 -2.069 0 -3.29507 -1.762481 -5.28744 -1.762481 -2.069 -4.521146 -3.60159 -2.682036 -1.53259 -5.900479 -2.91193 -3.141814 -1.37933 -6.053739 -3.3717 -2.835295 -1.99237 -4.904294 -4.90429 -1.99237 -2.98856 -2.298888 -7.66296 -0.07663 -0.61304 -0.07663 -1.5326 0 -0.91955 0.153259 -1.3027 1.072815 -6.36026 5.90048 -9.80859 4.904294 -3.52496 13.486809 -3.52496 5.057554 0 8.812404 1.3027 3.754851 1.30271 6.130368 3.60159 2.452148 2.29889 3.601592 5.51734 1.226073 3.14181 1.226073 6.89666 H 38.048731 q 0 -1.3027 -0.229889 -2.52878 -0.153259 -1.3027 -0.766296 -2.29889 -0.613037 -0.99618 -1.762481 -1.60922 -1.149444 -0.61303 -3.141813 -0.61303 z"
+                                FillRule="NonZero" />
+                        </Path.Data>
+                    </Path>
+                    <Path Fill="#FF000000"
+                          StrokeThickness="1.91573977" StrokeLineJoin="Miter" StrokeStartLineCap="Flat"
+                          StrokeEndLineCap="Flat">
+                        <Path.Data>
+                            <PathGeometry
+                                Figures="m 74.140075 234.43258 q 9.195552 0 13.103661 4.138 3.90811 4.06136 3.90811 11.95421 v 11.41781 q 0 3.6016 -0.919555 6.66678 -0.919556 2.98855 -2.988555 5.21081 -1.992369 2.22226 -5.210813 3.52496 -3.218443 1.22608 -7.892848 1.22608 -4.367888 0 -7.586331 -1.22608 -3.141814 -1.3027 -5.210813 -3.52496 -2.068999 -2.22226 -3.141813 -5.21081 -0.996185 -3.06518 -0.996185 -6.66678 v -11.72432 q 0 -3.52497 0.996185 -6.43689 1.072814 -2.91193 3.141813 -4.98093 2.068999 -2.06899 5.210813 -3.21844 3.218443 -1.14944 7.586331 -1.14944 z m 0 34.55995 q 3.065184 0 4.291257 -1.99237 1.226074 -1.99237 1.226074 -4.9043 v -12.03084 q 0 -2.98856 -1.379333 -4.67441 -1.379333 -1.68585 -4.137998 -1.68585 -3.141814 0 -4.367888 2.069 -1.149444 1.99237 -1.149444 4.82766 v 11.57107 q 0 2.8353 1.149444 4.82767 1.226074 1.99237 4.367888 1.99237 z"
+                                FillRule="NonZero" />
+                        </Path.Data>
+                    </Path>
+                    <Path Fill="#FF000000"
+                          StrokeThickness="1.91573977" StrokeLineJoin="Miter" StrokeStartLineCap="Flat"
+                          StrokeEndLineCap="Flat">
+                        <Path.Data>
+                            <PathGeometry
+                                Figures="m 115.31651 234.43258 q 5.59396 0 8.88904 1.37933 3.29507 1.37933 5.05755 3.75485 1.76248 2.29889 2.29889 5.4407 0.5364 3.06519 0.5364 6.59015 v 26.20732 h -11.49444 v -26.20732 q 0 -1.45596 -0.30651 -2.68204 -0.22989 -1.3027 -0.91956 -2.22226 -0.61304 -0.99618 -1.68585 -1.53259 -1.07282 -0.53641 -2.60541 -0.53641 -0.5364 0 -2.14563 0.15326 -1.60922 0.15326 -3.3717 0.99619 v 32.03117 H 98.151481 v -32.03117 -2.91193 q 0 -1.22607 0 -2.52877 0.07663 -1.37934 0.07663 -2.29889 2.222259 -1.22607 4.827669 -1.91574 2.6054 -0.68967 4.98092 -1.07282 2.45215 -0.38314 4.29126 -0.45977 1.91574 -0.15326 2.6054 -0.15326 z"
+                                FillRule="NonZero" />
+                        </Path.Data>
+                    </Path>
+                    <Path Fill="#FF000000"
+                          StrokeThickness="1.91573977" StrokeLineJoin="Miter" StrokeStartLineCap="Flat"
+                          StrokeEndLineCap="Flat">
+                        <Path.Data>
+                            <PathGeometry
+                                Figures="m 156.64621 234.43258 q 3.98474 0 7.96948 0.91955 3.98474 0.84293 7.04992 3.06519 v 41.53324 q 0 3.3717 -0.84293 6.207 -0.84292 2.83529 -2.83529 4.82766 -1.99237 2.069 -5.28744 3.14182 -3.29508 1.14944 -8.12274 1.14944 -3.67822 0 -6.82004 -0.91955 -3.06518 -0.84293 -5.36407 -2.52878 -2.22226 -1.68585 -3.52496 -4.06137 -1.22607 -2.37552 -1.22607 -5.28744 h 10.65151 q 0 2.29889 1.76248 3.52496 1.83911 1.22607 3.98474 1.22607 3.3717 0 4.75104 -1.37933 1.45596 -1.3027 1.45596 -4.21463 v -4.29126 q -2.52878 0.68967 -5.51733 0.68967 -4.36789 0 -7.58633 -1.22607 -3.14182 -1.30271 -5.28745 -3.44834 -2.06899 -2.22225 -3.14181 -5.21081 -0.99618 -3.06518 -0.99618 -6.59014 v -11.6477 q 0 -3.14182 1.14944 -5.90048 1.14944 -2.75867 3.44833 -4.82767 2.37552 -2.14563 5.90048 -3.3717 3.60159 -1.3027 8.42926 -1.37933 z m 3.60159 9.65533 q -2.45215 -0.61304 -4.44452 -0.61304 -2.75866 0 -4.75103 1.45596 -1.91574 1.37934 -1.91574 5.05756 v 11.57107 q 0 3.29507 1.14944 5.05755 1.22607 1.76248 4.44452 1.76248 2.91192 0 4.138 -1.53259 1.22607 -1.60922 1.37933 -4.75104 z"
+                                FillRule="NonZero" />
+                        </Path.Data>
+                    </Path>
+                    <Path Fill="#FF000000"
+                          StrokeThickness="1.91573977" StrokeLineJoin="Miter" StrokeStartLineCap="Flat"
+                          StrokeEndLineCap="Flat">
+                        <Path.Data>
+                            <PathGeometry
+                                Figures="m 193.9361 242.63194 h 18.3911 l -4.67441 10.72815 H 193.9361 v 24.44484 h -13.7167 v -45.74787 q 0 -6.7434 3.44833 -9.65533 3.52496 -2.91192 10.26837 -2.91192 h 20.00032 l -4.6744 10.72814 h -11.80096 q -1.30271 0 -2.069 0.15326 -0.68967 0.15326 -1.07282 0.61304 -0.30652 0.45977 -0.38314 1.37933 0 0.91955 0 2.45215 z"
+                                FillRule="NonZero" />
+                        </Path.Data>
+                    </Path>
+                    <Path Fill="#FF000000"
+                          StrokeThickness="1.91573977" StrokeLineJoin="Miter" StrokeStartLineCap="Flat"
+                          StrokeEndLineCap="Flat">
+                        <Path.Data>
+                            <PathGeometry
+                                Figures="m 219.18075 235.65865 h 11.41781 v 42.14628 h -11.41781 z m 5.67059 -4.6744 q -2.52878 0 -4.29126 -1.76249 -1.76248 -1.83911 -1.76248 -4.29125 0 -2.52878 1.76248 -4.29126 1.76248 -1.83911 4.29126 -1.83911 2.52877 0 4.29125 1.83911 1.83912 1.76248 1.83912 4.29126 0 2.45214 -1.83912 4.29125 -1.76248 1.76249 -4.29125 1.76249 z"
+                                FillRule="NonZero" />
+                        </Path.Data>
+                    </Path>
+                    <Path Fill="#FF000000"
+                          StrokeThickness="1.91573977" StrokeLineJoin="Miter" StrokeStartLineCap="Flat"
+                          StrokeEndLineCap="Flat">
+                        <Path.Data>
+                            <PathGeometry
+                                Figures="m 255.25534 234.43258 q 5.59396 0 8.88903 1.37933 3.29508 1.37933 5.05756 3.75485 1.76248 2.29889 2.29888 5.4407 0.53641 3.06519 0.53641 6.59015 v 26.20732 h -11.49444 v -26.20732 q 0 -1.45596 -0.30652 -2.68204 -0.22989 -1.3027 -0.91955 -2.22226 -0.61304 -0.99618 -1.68585 -1.53259 -1.07282 -0.53641 -2.60541 -0.53641 -0.53641 0 -2.14563 0.15326 -1.60922 0.15326 -3.3717 0.99619 v 32.03117 h -11.41781 v -32.03117 -2.91193 q 0 -1.22607 0 -2.52877 0.0766 -1.37934 0.0766 -2.29889 2.22226 -1.22607 4.82766 -1.91574 2.60541 -0.68967 4.98093 -1.07282 2.45214 -0.38314 4.29125 -0.45977 1.91574 -0.15326 2.60541 -0.15326 h 0.38315 z"
+                                FillRule="NonZero" />
+                        </Path.Data>
+                    </Path>
+                    <Path Fill="#FF000000"
+                          StrokeThickness="1.91573977" StrokeLineJoin="Miter" StrokeStartLineCap="Flat"
+                          StrokeEndLineCap="Flat">
+                        <Path.Data>
+                            <PathGeometry
+                                Figures="m 312.37072 219.48981 v 42.29954 q 0 3.60159 -1.14945 6.7434 -1.07281 3.06518 -3.29507 5.36407 -2.14563 2.22226 -5.36407 3.52496 -3.21844 1.22608 -7.43307 1.22608 -4.36789 0 -7.58633 -1.22608 -3.21845 -1.22607 -5.36407 -3.3717 -2.069 -2.22226 -3.14182 -5.21081 -1.07281 -3.06519 -1.07281 -6.59015 V 249.7585 q 0 -7.12656 4.6744 -11.11129 4.75104 -4.06137 14.483 -4.21463 0.91955 0 1.76248 0 0.91955 0 1.83911 0.15326 v -15.09603 z m -17.24166 49.34946 q 3.21844 0 4.36788 -1.76248 1.22608 -1.83911 1.22608 -5.28744 v -17.54818 q -2.45215 -0.61304 -4.52115 -0.61304 -2.83529 0 -4.75103 1.45596 -1.91574 1.37934 -1.91574 5.13419 v 12.03084 q 0 3.21845 1.22607 4.9043 1.22607 1.68585 4.36789 1.68585 z"
+                                FillRule="NonZero" />
+                        </Path.Data>
+                    </Path>
+                    <Path Fill="#FF000000"
+                          StrokeThickness="1.91573977" StrokeLineJoin="Miter" StrokeStartLineCap="Flat"
+                          StrokeEndLineCap="Flat">
+                        <Path.Data>
+                            <PathGeometry
+                                Figures="m 352.30672 259.64372 h -22.45247 q 0 1.60922 0.0766 3.52496 0.0766 1.83911 0.61304 3.44833 0.61303 1.60922 1.83911 2.68204 1.22607 1.07281 3.52496 1.07281 1.60922 0 2.6054 -0.45978 0.99619 -0.45977 1.60923 -1.07281 0.61303 -0.68967 0.91955 -1.37933 0.30652 -0.7663 0.53641 -1.37934 h 10.57488 q -0.38314 2.8353 -1.45596 5.13419 -1.07281 2.29888 -2.98855 3.90811 -1.91574 1.60922 -4.82767 2.45214 -2.91192 0.84293 -6.97329 0.84293 -4.59778 0 -7.89285 -1.60922 -3.21844 -1.60922 -5.21081 -4.21463 -1.99237 -2.60541 -2.91193 -5.97711 -0.91955 -3.3717 -0.91955 -6.97329 v -9.34881 q 0 -3.52497 0.99618 -6.43689 1.07282 -2.91193 3.14182 -4.98093 2.06899 -2.14562 5.21081 -3.29507 3.21844 -1.14944 7.58633 -1.14944 4.82766 0 7.96948 1.53259 3.21844 1.45596 5.05755 3.90811 1.91574 2.45215 2.60541 5.74722 0.76629 3.29507 0.76629 6.82003 z m -10.26836 -8.12274 q 0 -1.45596 -0.15326 -2.98856 -0.0766 -1.60922 -0.68967 -2.91192 -0.53641 -1.37933 -1.76248 -2.22226 -1.22607 -0.91955 -3.52496 -0.91955 -3.21844 0 -4.67441 1.99237 -1.37933 1.91574 -1.37933 5.82385 v 2.14562 h 12.18411 z"
+                                FillRule="NonZero" />
+                        </Path.Data>
+                    </Path>
+                    <Path Fill="#FF000000"
+                          StrokeThickness="1.91573977" StrokeLineJoin="Miter" StrokeStartLineCap="Flat"
+                          StrokeEndLineCap="Flat">
+                        <Path.Data>
+                            <PathGeometry
+                                Figures="m 387.54556 235.65865 -5.28745 10.42163 h -6.20699 q -1.14945 0 -2.29889 0.22989 -1.14945 0.15326 -1.99237 0.76629 -0.84293 0.53641 -1.37934 1.60922 -0.5364 0.99619 -0.5364 2.75867 v 26.36058 h -11.57107 v -26.36058 q 0 -3.21844 1.14944 -6.05374 1.14945 -2.83529 3.52496 -4.98092 2.37552 -2.14563 5.97711 -3.37171 3.60159 -1.3027 8.50589 -1.37933 h 0.61303 z"
+                                FillRule="NonZero" />
+                        </Path.Data>
+                    </Path>
+                </Canvas>
+            </Canvas>
+        </Canvas>
+
+        <Grid HorizontalAlignment="Center">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="30" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Row="1" Grid.RowSpan="4" Grid.ColumnSpan="2" Grid.Column="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="100" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Content="Liedinformationen" FontWeight="Bold" />
+                <Label Grid.Row="1" Grid.Column="0" Content="Lizenz:" />
+                <Label Grid.Row="1" Grid.Column="1" Content="?" Name="SongCheck1" />
+                <Label Grid.Row="2" Grid.Column="0" Content="Vorhanden:" />
+                <Label Grid.Row="2" Grid.Column="1" Content="?" Name="SongExists" />
+                <Label Grid.Row="3" Grid.Column="0" Content="" Name="SongBookPreview" Grid.ColumnSpan="2" />
+            </Grid>
+
+            <TextBox Grid.Row="1" Grid.Column="1" Margin="3" controls:TextBoxHelper.Watermark="Lied"
+                     controls:TextBoxHelper.ClearTextButton="True" Name="SongBox" MaxLength="3"
+                     TextChanged="SongBox_Changed"
+                     KeyDown="SongBox_OnKeyDown"
+                     PreviewKeyDown="SongBox_OnPreviewKeyDown" />
+            <Button Grid.Column="1" Grid.Row="3" HorizontalAlignment="Right"
+                    MinWidth="80" Margin="3" Content="Öffnen" Click="Open_Click" />
+        </Grid>
+        <Label Content="©2018 GlaTEC" />
+    </StackPanel>
+</controls:MetroWindow>

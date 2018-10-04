@@ -1,0 +1,22 @@
+﻿<controls:MetroWindow x:Class="SongFinder.Converter"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        mc:Ignorable="d" Title="Converter"
+        Height="150" Width="150" ResizeMode="NoResize" >
+    <StackPanel Margin="5">
+        <ComboBox Name="SongBookBox" HorizontalContentAlignment="Center" Margin="35,0,35,0" SelectionChanged="SongBookBox_OnSelectionChanged">
+            <ComboBoxItem IsSelected="True">GHS</ComboBoxItem>
+            <ComboBoxItem>WLG</ComboBoxItem>
+            <ComboBoxItem>LQ</ComboBoxItem>
+        </ComboBox>
+        <Label Content="Liednummer:" HorizontalContentAlignment="Center" Margin="20,0,20,0" />
+        <TextBox Name="SongConvertBox" MaxLength="3" FontSize="20" TextAlignment="Center" Height="30"
+                 Margin="20,0,20,0"
+                 TextChanged="SongConvertBox_OnTextChanged" KeyDown="ConvBox_OnKeyDown"
+                 PreviewKeyDown="SongConvertBox_OnPreviewKeyDown" />
+        <Label Margin="0" Name="Result" Content="?" HorizontalContentAlignment="Center" />
+    </StackPanel>
+</controls:MetroWindow>

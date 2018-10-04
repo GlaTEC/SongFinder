@@ -1,0 +1,117 @@
+﻿<controls:MetroWindow x:Class="SongFinder.Settings"
+                      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                      xmlns:controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+                      mc:Ignorable="d"
+                      Title="Einstellungen" Height="630" Width="600" Icon="songfinder.ico" ShowIconOnTitleBar="False"
+                      ContentRendered="Settings_OnContentRenderedOnLoaded" ResizeMode="NoResize">
+    <StackPanel>
+        <GroupBox Header="Allgemein" Margin="10" Background="#ececec" BorderBrush="#ececec">
+            <Grid Margin="0,0,5,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="7" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="7" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="7" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="7" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="10" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="300px" />
+                    <ColumnDefinition Width="5" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Label Grid.Row="0" Grid.Column="0" Content="Liedordner" />
+                <TextBox Grid.Row="0" Grid.Column="1" Name="SongFolder" />
+                <Button Grid.Row="0" Grid.Column="3" Click="Folder_OnClick" Content="Ordner..." />
+
+                <Label Grid.Row="2" Grid.Column="0" Content="Präfix" ToolTip="Text vor den Liednummern" />
+                <TextBox Grid.Row="2" Grid.Column="1" Name="Prefix" TextChanged="Prefix_OnTextChanged" />
+
+                <Label Grid.Row="4" Grid.Column="0" Content="Zwischenzeichen"
+                       ToolTip="Zeichen zwischen dem Präfix und der Liednummer" />
+                <ComboBox Grid.Row="4" Grid.Column="1" Name="SpaceSign"
+                          SelectionChanged="SpaceSign_OnSelectionChanged">
+                    <ComboBoxItem Name="Leerzeichen">Leerzeichen ( )</ComboBoxItem>
+                    <ComboBoxItem Name="Unterstrich">Unterstrich (_)</ComboBoxItem>
+                    <ComboBoxItem Name="Bindestrich">Bindestrich (-)</ComboBoxItem>
+                    <ComboBoxItem Name="Nichts">Nichts ()</ComboBoxItem>
+                </ComboBox>
+
+                <Label Grid.Row="6" Grid.Column="0" Content="Dateierweiterung"
+                       ToolTip="Z.B. bei einer PowerPoint eine '.pptx'. Muss als erstes Zeichen einen Punkt enthalten." />
+                <TextBox Grid.Row="6" Grid.Column="1" Name="Extension" TextChanged="Extension_OnTextChanged" />
+
+                <Label Grid.Row="8" Grid.Column="0" Content="Vorangestellte Null"
+                       ToolTip="Gibt an ob bei Ihren Dateien die Liednummer mit Nullen aufgefüllt wird, wenn diese 1 oder 2 stellig sind" />
+                <CheckBox Grid.Row="8" Grid.Column="1" Name="PresNull" Checked="PresNull_OnChecked"
+                          Unchecked="PresNull_OnUnchecked" />
+
+                <TextBlock Grid.Row="10" Grid.Column="0" Text="Beispiel:" Margin="6,0,0,0" />
+                <TextBlock Grid.Row="10" Grid.Column="1" Name="Preview" />
+            </Grid>
+        </GroupBox>
+
+        <GroupBox Header="Lizenz" Margin="10" Background="#ececec" BorderBrush="#ececec">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="7" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="300px" />
+                    <ColumnDefinition Width="5" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Label Grid.Row="0" Grid.Column="0" Content="Lizenz überprüfen"
+                       ToolTip="Wenn aktiviert, wird aus einer Datei gelesen, ob es für das Lied eine Lizenz gibt" />
+                <CheckBox Grid.Row="0" Grid.Column="1" Name="CheckForbiddenBox" Checked="CheckForbiddenBox_OnChecked"
+                          Unchecked="CheckForbiddenBox_OnUnchecked" />
+
+                <Label Grid.Row="2" Grid.Column="0" Content="Liste der unlizensierten Lieder" />
+                <TextBox Grid.Row="2" Grid.Column="1" Name="ForbiddenFileBox" />
+                <Button Grid.Row="2" Grid.Column="3" Name="ForbiddenFileOpen" Click="Forbidden_OnClick"
+                        Content="Datei..." />
+            </Grid>
+        </GroupBox>
+
+        <GroupBox Header="Sonstiges" Margin="10" Background="#ececec" BorderBrush="#ececec">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="10px" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Label Grid.Row="0" Grid.Column="0" Content="Im Vordergrund bleiben"
+                       ToolTip="Wenn eine Präsentation geöffnet wird, bleibt der SongFinder im Vordergrund, um das nächste Lied vorbereiten zu können" />
+                <CheckBox Grid.Row="0" Grid.Column="2" Name="StayOnTopBox" />
+            </Grid>
+        </GroupBox>
+
+
+        <!-- left top right bottom-->
+        <Button Margin="200,15,200,40" Click="ButtonBase_OnClick" Content="Speichern" />
+        <Label Content="TIPP: Gehen Sie mit der Maus über einen Punkt, um mehr über diesen zu erfahren" />
+        <StackPanel Orientation="Horizontal">
+            <Image Height="50" HorizontalAlignment="Left" Source="pack://application:,,,/images/tipp.png"
+                   Margin="5,0,0,0" />
+            <Button Content="Über" Margin="360,0,0,0" Padding="-5,0,-5,0" Width="50" Height="30" Click="About_OnClick" />
+        </StackPanel>
+    </StackPanel>
+</controls:MetroWindow>
